@@ -1,0 +1,21 @@
+function nextSlide(){
+  alert("Slide berikutnya kamu isi pesan spesial ya ❤️");
+}
+
+/* efek hati jatuh */
+
+function createHeart(){
+  const heart = document.createElement("div");
+  heart.classList.add("heart-fall");
+  heart.innerHTML = "❤";
+
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.animationDuration = (Math.random()*3+2)+"s";
+  heart.style.fontSize = (Math.random()*20+10)+"px";
+
+  document.querySelector(".hearts").appendChild(heart);
+
+  setTimeout(()=> heart.remove(),5000);
+}
+
+setInterval(createHeart,300);
