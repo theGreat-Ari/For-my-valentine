@@ -1,0 +1,96 @@
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(#ffe4ec,#ffd6e0);
+  font-family:sans-serif;
+  text-align:center;
+  overflow:hidden;
+}
+
+.slide{
+  position:relative;
+}
+
+.title{
+  color:#c9184a;
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.bear{
+  width:180px;
+  margin:15px 0;
+}
+
+.love{
+  font-size:20px;
+  margin:5px;
+}
+
+.face{
+  font-size:22px;
+  margin:5px;
+}
+
+.click{
+  margin:10px;
+  font-size:15px;
+}
+
+button{
+  margin-top:15px;
+  padding:15px 35px;
+  border:none;
+  border-radius:30px;
+  background:#e63946;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+.heart{
+  position:absolute;
+  top:-30px;
+  font-size:25px;
+}
+
+.left{
+  left:-40px;
+}
+
+.right{
+  right:-40px;
+}
+
+/* animasi hati jatuh */
+
+.hearts{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+.heart-fall{
+  position:absolute;
+  color:#ff4d6d;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(100vh);
+    opacity:0;
+  }
+}
